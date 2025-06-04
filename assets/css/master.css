@@ -61,6 +61,10 @@ header nav div#logo{
     font-size: 2em;
     color:white;
 }
+header nav a{
+    text-decoration: none;
+}
+
 main{
     padding:10px;
     width: 100%;
