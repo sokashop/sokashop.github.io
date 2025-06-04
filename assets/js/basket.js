@@ -51,7 +51,7 @@ document.querySelector("button.order").onclick=()=>{
 Name  : ${v.name}%0A
 Price : ${v.price} DH%0A
 Image : ${pth}${v.path}%0A
-Color : ${v.color}%0A
+Color : ${v.color.replace("#","%23")}%0A
 Size  : ${v.size}
             `;
         });
