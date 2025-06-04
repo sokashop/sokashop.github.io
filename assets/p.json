@@ -1,0 +1,37 @@
+[
+    {
+        "name":"Pijama dyal (تركيا)",
+        "price":100,
+        "sizes":["M"],
+        "colors":["#e69ea9"],
+        "path":"p1.png"
+    },
+    {
+        "name":"Pijama dyal (تركيا)",
+        "price":100,
+        "sizes":["M"],
+        "colors":["#6595ac"],
+        "path":"p2.png"
+    },
+    {
+        "name":"Pijama dyal (تركيا)",
+        "price":100,
+        "sizes":["M"],
+        "colors":["#a7b0ab"],
+        "path":"p3.png"
+    },
+    {
+        "name":"Pijama dyal (تركيا)",
+        "price":120,
+        "sizes":["M"],
+        "colors":["#b29899"],
+        "path":"p4.png"
+    },
+    {
+        "name":"Pijama dyal (تركيا)",
+        "price":120,
+        "sizes":["M"],
+        "colors":["#a9afc3"],
+        "path":"p5.png"
+    }
+]

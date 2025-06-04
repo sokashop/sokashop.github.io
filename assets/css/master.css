@@ -1,0 +1,251 @@
+:root{
+    --color-pink:#F49BAB;
+    --color-purple:#7F55B1;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #7F55B1;
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+div.container{
+    width:80%;
+    max-width: 900px;
+}
+
+header nav{
+    width:100%;
+    height: 50px;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-pink);
+}
+header nav ul{
+    list-style-type: none;
+}
+header nav div.basket{
+    background-image: url("/assets/images/basket.svg");
+    background-size: 100%;
+    width:50px;
+    height:50px;
+    cursor: pointer;
+    position: relative;
+}
+header nav div.basket div.bnumber{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: var(--color-pink);
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:2px;
+    border:1px solid white;
+    opacity: 0;
+    
+}
+header nav div#logo{
+    font-family: "Dancing Script", cursive;
+    font-size: 2em;
+    color:white;
+}
+main{
+    padding:10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+main>div:first-child{
+    font-size: 3em;
+    color: var(--color-pink);
+}
+main div.product{
+    padding:10px;
+    width: 100%;
+    background-color: #9B7EBD;
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    flex-wrap: wrap;
+    border-radius: 5px;
+}
+main div.product div{
+    padding:10px;
+    width:200px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+    border-radius: 5px;
+}
+main div.product div img{
+    width:180px;
+    background-color: #F49BAB;
+    border-radius: 5px;
+}
+main div.product div div.title{
+    width:100%;
+    font-weight: 600;
+    font-size: 1.5em;
+    padding:0 10px;
+}
+main div.product div div.price{
+    width:100%;
+    color:green;
+    color: rgba(0, 0, 0, 0.6);
+    font-weight: 600;
+    padding:0 10px;
+}
+main div.viewP{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    display: none;
+}
+main div.viewP>div{
+    max-width: 900px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:calc(100% - 20px);
+    display: flex;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+main div.viewP>div img{
+    width:50%;
+    background-color: white;
+    background-color: var(--color-pink);
+}
+main div.viewP>div>div{
+    width:50%;
+    background-color: black;
+    background-color: var(--color-purple);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap:10px;
+    font-size: 2em;
+    padding:20px;
+}
+main div.viewP>div div.colors,main div.viewP div.sizes{
+    display: flex;
+    gap: 15px;
+}
+main div.viewP>div div.colors span{
+    display: flex;
+    width:50px;
+    height:50px;
+    background-color: #9B7EBD;
+    border-radius: 50%;
+    border:2px solid white;
+    cursor: pointer;
+    user-select: none;
+    opacity: .5;
+}
+main div.viewP>div div.sizes span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    cursor: pointer;    
+    user-select: none;
+}
+main div.viewP>div div.close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width:50px;
+    height:50px;
+    background-image: url("/assets/images/cl.webp");
+    background-size: 100%;
+    cursor: pointer;
+}
+main div.viewP>div div.addbtn{
+    background-color: var(--color-pink);
+    opacity: .5;
+    padding: 10px;
+    border-radius: 5px;
+    cursor:not-allowed;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+footer{
+    color:white;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px;
+    height: 50px;
+}
+
+@media (max-width:650px) {
+    div.container{
+        width:100%;
+    }
+    main div.viewP>div{
+        flex-direction: column;
+        width: calc(90% - 20px);
+    }
+    main div.viewP>div img{
+        width:100%;
+    }
+    main div.viewP>div>div{
+        width:100%;
+    }
+    main div.viewP>div div.close{
+        border-bottom-left-radius: 5px;
+    }
+    main div.viewP>div>div{
+        align-items: flex-start;
+    }
+    main div.viewP div.t{
+        font-weight: 600;
+    }
+    main div.viewP div.p{
+        color: rgba(255, 255, 255, 0.7);
+        font-weight: 600;
+        font-size: .7em;
+    }
+    main div.viewP>div div.addbtn{
+        width:100%;
+    }
+    main div.product div{
+        width: 100%;
+        max-width: 360px;
+    }
+    main div.product div img{
+        width: 100%;
+    }
+}
