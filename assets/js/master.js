@@ -20,6 +20,7 @@ fetch("/assets/p.json")
             div0.classList.add("prod");
             let img=document.createElement("img");
             img.src=`/assets/images/${p.path}`;
+            img.alt=p.name;
             let div1=document.createElement("div");
             div1.classList.add("title");
             div1.appendChild(document.createTextNode(p.name));
