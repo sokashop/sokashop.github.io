@@ -45,7 +45,7 @@ main{
     gap:10px;
 }
 main>div:first-child{
-    font-size: 2em;
+    font-size: 3em;
     color:var(--color-pink);
     padding-bottom: 10px;
 }
