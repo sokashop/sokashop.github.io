@@ -80,6 +80,9 @@ div.myp>div>div>div:last-child{
     align-items: center;
     gap: 10px;
 }
+div.myp>div>div>div.price{
+    color:rgba(255, 255, 255, 0.7);
+}
 div.myp>div>div>div>div.color{
     background-color: red;
     width:50px;
