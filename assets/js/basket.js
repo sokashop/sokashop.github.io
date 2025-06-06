@@ -5,6 +5,7 @@ if(localStorage.getItem("basket") !== null){
         let div0=document.createElement("div");
         let img=document.createElement("img");
         img.src=`/assets/images/${e.path}`;
+        img.alt=e.name;
         let span=document.createElement("span");
         span.classList.add("close");
         span.onclick=(sp)=>{
