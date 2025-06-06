@@ -111,7 +111,6 @@ main div.product div{
 }
 main div.product div img{
     width:180px;
-    padding:10px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     max-width: 350px;
