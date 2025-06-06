@@ -19,8 +19,19 @@ div.container{
     max-width: 900px;
 }
 
+header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #9B7EBD;
+    box-shadow: 0 1px 4px 0 black;
+}
 header nav{
-    width:100%;
+    width:80%;
+    max-width: 900px;
     height: 50px;
     padding:10px;
     display: flex;
@@ -54,7 +65,6 @@ header nav div.basket div.bnumber{
     padding:2px;
     border:1px solid white;
     opacity: 0;
-    
 }
 header nav div#logo{
     font-family: "Dancing Script", cursive;
@@ -66,6 +76,7 @@ header nav a{
 }
 
 main{
+    margin-top: 50px;
     padding:10px;
     width: 100%;
     display: flex;
@@ -215,7 +226,7 @@ footer{
 }
 
 @media (max-width:650px) {
-    div.container{
+    div.container,header nav{
         width:100%;
     }
     main div.viewP>div{
