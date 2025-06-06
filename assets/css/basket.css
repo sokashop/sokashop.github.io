@@ -21,13 +21,24 @@ div.container{
     flex-direction: column;
 }
 
+header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #9B7EBD;
+    box-shadow: 0 1px 4px 0 black;
+    z-index: 3;
+}
 header nav{
-    width:100%;
+    width:80%;
+    max-width: 900px;
     height: 50px;
     padding:10px;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid var(--color-pink);
 }
 header nav div#logo{
     font-family: "Dancing Script", cursive;
@@ -103,6 +114,11 @@ div.myp>div>span{
     background-size: 100%;
     cursor: pointer;
 }
+
+
+main{
+    margin-top: 50px;
+}
 main button.order{
     width:220px;
     height: 60px;
@@ -138,7 +154,7 @@ footer{
     height: 50px;
 }
 @media (max-width:650px) {
-    div.container{
+    div.container,header nav{
         width:100%;
     }
     div.myp>div{
