@@ -112,7 +112,7 @@ main div.product div{
 }
 main div.product div img{
     aspect-ratio: 1 / 1;
-    width:180px;
+    width:190px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     max-width: 350px;
