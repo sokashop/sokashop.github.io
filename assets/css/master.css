@@ -100,7 +100,7 @@ main div.product{
     border-radius: 5px;
 }
 main div.product div{
-    padding:10px;
+    padding:5px;
     width:200px;
     background-color: white;
     display: flex;
