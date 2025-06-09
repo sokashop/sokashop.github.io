@@ -19,7 +19,7 @@ fetch("/assets/p.json")
             let div0=document.createElement("div");
             div0.classList.add("prod");
             let img=document.createElement("img");
-            img.src=`/assets/images/${p.path}`;
+            img.src=`/assets/images/${p.path[0]}`;
             img.alt=p.name;
             let div1=document.createElement("div");
             div1.classList.add("title");
@@ -32,11 +32,22 @@ fetch("/assets/p.json")
             div0.appendChild(div2);
             div0.onclick=function(){
                 let btAr={};
+                // document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
+                // setTimeout(window.scrollTo(1,1),0);
                 document.querySelector("div.viewP div.addbtn").style.opacity=".5";        
                 document.querySelector("div.viewP div.addbtn").style.cursor="not-allowed";                
                 document.querySelector("div.viewP").style.display="flex";
-                document.querySelector("div.viewP").setAttribute("imgI",i);
-                document.querySelector("div.viewP img").src=`/assets/images/${p.path}`;
+                document.querySelector("div.viewP").setAttribute("pi",i);
+                document.querySelector("div.viewP").setAttribute("index",0);
+                document.querySelector("div.viewP img").src=`/assets/images/${p.path[0]}`;
+                if(p.path.length <= 1){
+                    document.querySelector("div.viewP div.left").style.display="none";
+                    document.querySelector("div.viewP div.right").style.display="none";
+                }
+                else{
+                    document.querySelector("div.viewP div.left").style.display="flex";
+                    document.querySelector("div.viewP div.right").style.display="flex";
+                }
                 document.querySelector("div.viewP div.t").innerHTML=p.name;
                 document.querySelector("div.viewP div.p").innerHTML=`${p.price} DH`;
                 document.querySelector("div.viewP div.colors").innerHTML="";
@@ -105,3 +116,23 @@ fetch("/assets/p.json")
     });
 
 document.querySelector("footer div.copy").innerHTML=`&copy ${new Date().getFullYear()}`;
+
+document.querySelector("div.viewP div.left").onclick=(e)=>{
+    let pi=parseInt(e.target.parentNode.parentNode.parentNode.getAttribute("pi")),index=parseInt(e.target.parentNode.parentNode.parentNode.getAttribute("index"));
+    if(index === 0)
+        index=pAr[pi].path.length-1;
+    else 
+        index--;
+    document.querySelector("div.viewP img").src=`/assets/images/${pAr[pi].path[index]}`;
+    e.target.parentNode.parentNode.parentNode.setAttribute("index",index);
+};
+
+document.querySelector("div.viewP div.right").onclick=(e)=>{
+    let pi=parseInt(e.target.parentNode.parentNode.parentNode.getAttribute("pi")),index=parseInt(e.target.parentNode.parentNode.parentNode.getAttribute("index"));
+    if(index === pAr[pi].path.length-1)
+        index=0;
+    else 
+        index++;
+    document.querySelector("div.viewP img").src=`/assets/images/${pAr[pi].path[index]}`;
+    e.target.parentNode.parentNode.parentNode.setAttribute("index",index);
+};

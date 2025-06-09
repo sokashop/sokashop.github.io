@@ -28,7 +28,6 @@ header{
     left: 0;
     display: flex;
     justify-content: center;
-    background-color: #9B7EBD;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
     background: linear-gradient(to bottom,#9B7EBD 25%,var(--color-purple));
     z-index: 3;
@@ -72,7 +71,7 @@ div.myp{
     border-radius: 5px;
 }
 div.myp>div{
-    background-color: white;
+    background-color: lightgray;
     display: flex;
     font-size: 2em;
     color: white;
@@ -80,6 +79,7 @@ div.myp>div{
     border-radius: 5px;
     position: relative;
     max-width: 400px;
+    aspect-ratio: 2/1;
 }
 div.myp>div>div{
     width: 50%;
@@ -99,7 +99,7 @@ div.myp>div>div>div.price{
     color:rgba(255, 255, 255, 0.7);
 }
 div.myp>div>div>div>div.color{
-    background-color: red;
+    background-color: lightgray;
     width:50px;
     height:50px;    
     border-radius: 50%;
@@ -118,8 +118,6 @@ div.myp>div>span{
     background-size: 100%;
     cursor: pointer;
 }
-
-
 main{
     margin-top: 50px;
 }
@@ -162,6 +160,7 @@ footer{
         width:100%;
     }
     div.myp>div{
+        aspect-ratio: unset;
         width:100%;
         flex-direction: column;
     }

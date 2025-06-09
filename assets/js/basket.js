@@ -4,7 +4,7 @@ if(localStorage.getItem("basket") !== null){
     basket.forEach((e,i) => {
         let div0=document.createElement("div");
         let img=document.createElement("img");
-        img.src=`/assets/images/${e.path}`;
+        img.src=`/assets/images/${e.path[0]}`;
         img.alt=e.name;
         let span=document.createElement("span");
         span.classList.add("close");
@@ -48,15 +48,22 @@ document.querySelector("button.order").onclick=()=>{
         let pth="https://sokashop.github.io/assets/images/";
         basket.forEach((v,i)=>{
             if(i > 0)st+=`%0A_________________%0A`;
+            let imgLinks="[  "
+            for(let i=0;i<v.path.length;i++)
+                imgLinks+= `${pth}${v.path[i]} , `;
+            imgLinks= imgLinks.slice(0,-3)+"  ]";
             st+=`
 Name  : ${v.name}%0A
 Price : ${v.price} DH%0A
-Image : ${pth}${v.path}%0A
+Image : ${imgLinks}%0A
 Color : ${v.color.replace("#","%23")}%0A
 Size  : ${v.size}
             `;
         });
         let link=`https://wa.me/212698203145?text=${st}`;
+        // localStorage.setItem("basket",[]);
+        localStorage.removeItem("basket");
+        document.querySelector("div.myp").innerHTML="";
         open(link);
     }
 }
