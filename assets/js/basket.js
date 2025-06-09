@@ -64,6 +64,7 @@ Size  : ${v.size}
         // localStorage.setItem("basket",[]);
         localStorage.removeItem("basket");
         document.querySelector("div.myp").innerHTML="";
+        document.querySelector("main>div:first-child").innerHTML=`سلتي`;
         open(link);
     }
 }
